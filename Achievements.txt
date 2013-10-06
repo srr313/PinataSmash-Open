@@ -1,0 +1,142 @@
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=BAT_500
+    COMPARISON=1
+    METRIC=2
+    RHS=499
+    DESCRIPTION=Mad Batter: Took 500 swings!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681220049
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=VEGETABLES_50
+    COMPARISON=1
+    METRIC=1
+    RHS=49
+    DESCRIPTION=Lean and Mean: Ate 50 vegetables!
+    IMAGE=Candy_01.png   
+    CRYSTAL_ID=1681047664
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=CANDY_500
+    COMPARISON=1
+    METRIC=0
+    RHS=499
+    DESCRIPTION=Pot Belly: Ate 500 candies!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681059726
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=CANDY_1000
+    COMPARISON=1
+    METRIC=0
+    RHS=999
+    DESCRIPTION=Big Boned: Ate 1,000 candies!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1680982890
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=PINATAS_100
+    COMPARISON=1
+    METRIC=8
+    RHS=99
+    DESCRIPTION=Piñata Smasher: Smashed 100 piñatas!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681041649
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=PINATAS_500
+    COMPARISON=1
+    METRIC=8
+    RHS=499
+    DESCRIPTION=Rampage: Smashed 500 piñatas!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1687938031
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=BABY_SQUID_50
+    COMPARISON=1
+    METRIC=11
+    RHS=49
+    DESCRIPTION=Squish'em: Smashed 50 tiny squid!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681087718
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=UFOS_10
+    COMPARISON=1
+    METRIC=14
+    RHS=9
+    DESCRIPTION=Abduction Proof: Destroyed 10 UFOs!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681029718
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=FAIRY_1
+    COMPARISON=1
+    METRIC=15
+    RHS=0
+    DESCRIPTION=Bye Bye: Destroyed a fairy!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681166139
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=CHAMELEONS_10
+    COMPARISON=1
+    METRIC=17
+    RHS=9
+    DESCRIPTION=Spot a Chameleon: Broke 10 chameleons!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681213934
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=TREASURE_10
+    COMPARISON=1
+    METRIC=17
+    RHS=9
+    DESCRIPTION=Sugar Booty: Opened 10 treasure chests!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681261277
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=BOMBS_15
+    COMPARISON=1
+    METRIC=4
+    RHS=14
+    DESCRIPTION=Kaboom: Detonated 15 bombs!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1681157067
+END
+
+BEGIN
+    NAME=ACHIEVEMENT
+    ID=GOOD_GREMLINS_10
+    COMPARISON=1
+    METRIC=18
+    RHS=9
+    DESCRIPTION=Good Guys: Prevented 10 gremlins from transforming!
+    IMAGE=Candy_01.png
+    CRYSTAL_ID=1685802486
+END

@@ -1,0 +1,179 @@
+BEGIN
+    NAME=HEADER
+    TITLE=I See Dead Pinatas
+    STATE=0
+    INITIAL_CANDY=250
+    CONSUME_AMOUNT=20.0
+    CONSUME_DELAY=2.0
+    CANDY_REQUIRED=6000.0
+	TUTORIAL1=Ghost pinatas disappear after a short while.
+	TUTORIAL2=Hit them before they vanish!     
+END
+BEGIN
+    NAME=RULE
+    COMPARISON=-1
+    METRIC=0
+    BRONZE=200
+    SILVER=150
+    GOLD=110
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=-0.5,-0.25        
+    TIME_BETWEEN=2.0        
+    INITIAL_DELAY=0.0       
+    RANDOM_DELAY=3.0        
+    TYPE=11                  
+    AMOUNT=50                
+    LIMIT=5                
+    GHOSTING=false           
+    VEGGIES=false
+	Lifetime=10          
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=0.5,1.25        
+    TIME_BETWEEN=2.0        
+    INITIAL_DELAY=0.1       
+    RANDOM_DELAY=3.0        
+    TYPE=11                  
+    AMOUNT=50                
+    LIMIT=5                
+    GHOSTING=false           
+    VEGGIES=false
+	Lifetime=10          
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=-0.2,0.75        
+    TIME_BETWEEN=2.0        
+    INITIAL_DELAY=0.0       
+    RANDOM_DELAY=3.0        
+    TYPE=11                  
+    AMOUNT=50                
+    LIMIT=5                
+    GHOSTING=false           
+    VEGGIES=false
+	Lifetime=10          
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=1.2,0.8                    
+    TIME_BETWEEN=3.0        
+    INITIAL_DELAY=0.5       
+    RANDOM_DELAY=3.0        
+    TYPE=11                  
+    AMOUNT=10                
+    LIMIT=3                
+    GHOSTING=false           
+    VEGGIES=TRUE
+	Lifetime=8         
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=0.25,1.2                   
+    TIME_BETWEEN=6.0        
+    INITIAL_DELAY=2       
+    RANDOM_DELAY=6.0        
+    TYPE=1                 
+    AMOUNT=10                
+    LIMIT=3                
+    GHOSTING=false           
+    VEGGIES=False
+	Lifetime=10
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=0.45,-0.2                    
+    TIME_BETWEEN=3.0        
+    INITIAL_DELAY=5       
+    RANDOM_DELAY=8.0        
+    TYPE=1                 
+    AMOUNT=10                
+    LIMIT=2                
+    GHOSTING=false           
+    VEGGIES=TRUE
+	Lifetime=8
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=0.0,1.2                    
+    TIME_BETWEEN=5.0        
+    INITIAL_DELAY=7       
+    RANDOM_DELAY=5.0        
+    TYPE=9                 
+    AMOUNT=10                
+    LIMIT=4                
+    GHOSTING=false           
+    VEGGIES=FALSE
+	Lifetime=10
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=-0.2,0.0        
+    TIME_BETWEEN=5.0        
+    INITIAL_DELAY=3       
+    RANDOM_DELAY=4.0        
+    TYPE=2                 
+    AMOUNT=12                
+    LIMIT=4               
+    GHOSTING=false           
+    VEGGIES=FALSE
+END
+BEGIN 
+    NAME=PINATA_SPAWNER     
+    POSITION=1.2,0.75        
+    TIME_BETWEEN=5.0        
+    INITIAL_DELAY=6       
+    RANDOM_DELAY=4.0        
+    TYPE=2                 
+    AMOUNT=12                
+    LIMIT=4               
+    GHOSTING=false           
+    VEGGIES=FALSE
+END
+BEGIN 
+    NAME=POWERUP_SPAWNER
+    POSITION=-1.5,0.5
+    TIME_BETWEEN=5.0
+    RANDOM_DELAY=8.0
+    INITIAL_DELAY=8.0
+    TYPE=3
+    AMOUNT=99999
+END
+BEGIN 
+    NAME=POWERUP_SPAWNER
+    POSITION=-1.2,1.2
+    TIME_BETWEEN=2.0
+    RANDOM_DELAY=5.0
+    INITIAL_DELAY=2.0
+    TYPE=0
+    AMOUNT=99999
+END
+BEGIN 
+    NAME=POWERUP_SPAWNER
+    POSITION=0.2,-1.2
+    TIME_BETWEEN=2.0
+    RANDOM_DELAY=5.0
+    INITIAL_DELAY=5.0
+    TYPE=0
+    AMOUNT=99999
+END
+BEGIN 
+    NAME=POWERUP_SPAWNER
+    POSITION=-0.18,-0.2
+    TIME_BETWEEN=2.0
+    RANDOM_DELAY=5.0
+    INITIAL_DELAY=2.5
+    TYPE=4
+    AMOUNT=99999
+END
+BEGIN 
+    NAME=POWERUP_SPAWNER
+    POSITION=0.25,1.2
+    TIME_BETWEEN=2.0
+    RANDOM_DELAY=5.0
+    INITIAL_DELAY=7.0
+    TYPE=4
+    AMOUNT=99999
+END

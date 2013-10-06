@@ -1,0 +1,15 @@
+BEGIN
+    NAME=LEVELS
+    LEVEL1=Lottery
+    LEVEL2=Theft
+    LEVEL3=Cargo
+    LEVEL4=AirAssault
+    LEVEL5=QueenBug
+    LEVEL6=Heroes
+    LEVEL7=HeroesVsVillains
+    LEVEL8=HealthyPinatas    
+    LEVEL9=Vegetables
+    LEVEL10=BombsAndVeggies
+    LEVEL11=HealthyMutation
+    LEVEL12=PoliceLineup
+END

@@ -1,0 +1,215 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \ul \ulc0 Crystal SDK Release Notes
+\b0 \ulnone \
+\
+\
+Please direct any queries to 'Crystal Developer Support <devsupport@crystalsdk.com>.\
+ \
+\
+\ul CrystalSDK_2.0_build-0215 21/03/2011\
+\
+
+\b \ulnone New Features\
+\
+
+\b0 Crystal now includes a number of new features to help with the monetization of your apps. These include a virtual goods and currencies implementation with an off-the-shelf store front and a new viral marketing mechanism called gifting. Another notable feature is the addition of overlay UI components, that can be used for example for the unobtrusive display of leaderboards at a level-end screen. Most of the Crystal UI can be displayed in this way, allowing for much deeper integration of social features in your title.\
+\
+The new features are {\field{\*\fldinst{HYPERLINK "http://www.chillingo.com/documents/crystal/pdfs/crystal_v2_summary_developer_deck.pdf"}}{\fldrslt outlined in this PDF}}.\ul \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ulnone Some more information {\field{\*\fldinst{HYPERLINK "http://www.chillingo.com/documents/crystal/pdfs/crystal_v2_virtual_currencies.pdf"}}{\fldrslt virtual currencies}} is available. Some more information on {\field{\*\fldinst{HYPERLINK "http://www.chillingo.com/documents/crystal/pdfs/crystal_v2_gifting.pdf"}}{\fldrslt viral marketing through gifting}} is also available from the link.\ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 \ulnone Major changes
+\b0 \
+\
+Implemented a new Crystal overlay user interface that can be used to display individual or multiple Crystal sections from any of the screen edges.  This new overlay UI should complement the main Crystal UI and can be used, for example, to display a specific leaderboard at the end of a level or a news feed on a games front end.  Further information and the methods available for using the new overlay UI can be found in the CrystalSession+PullTab.h file but any usage will require an updated theme file. \
+\
+Added JSON.cs source file as part of Unity distribution.  This file is required to build with Unity so please see the developer wiki for further details.  \
+\
+Reduced the binary size of the Crystal SDK library by reducing down the symbols being exported.  This should result in slightly quicker linking and smaller application builds overall.  Please let us know as soon as possible if this causes any problems when building an application via Crystal Developer Support <devsupport@crystalsdk.com>.\
+\
+Theme updates are required to use some of the new Crystal features. If you run into errors please contact devsupport@crystalsdk.com and we'll arrange for updates to your existing themes. In the mean time please use the supplied UniversalIndigo theme for testing.\
+\
+We have now moved over to using a single sign-on system rather than requiring a user to sign up before being able to use Crystal.  This means that a user is now always determined to be signed in as either a guest or a registered user and any Crystal functionality that queries the current user signed up state has been updated to reflect this.  Users using previous versions of the SDK will still be required to login as before. \
+\
+\
+
+\b Minor Changes
+\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+Fix for some of the dialog boxes appearing offset.  These should now be centralised correctly \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Fix for the time format of leaderboards to match times used by Game Center \
+\
+Fixed a crash when selecting the 'Set Location' option via the Leaderboards \
+\
+Added Unity support for custom leaderboard access, virtual gifts and virtual currencies.  Also added some missing public API's to bring the Unity implementation closer to parity with the Objective-C API's \
+\
+Added the ability to view YouTube urls embedded within the Crystal UI \
+\
+The player ID can now be requested from the CrystalPlayer instance \
+\
+Deprecated the CrystalLeaderboard positionForLeaderboardEntry method.  This change is due to excessive server load when calculating the exact leaderboard positions so unfortunately we have had to remove this functionality.\
+\
+Added a new - (NSString*) percentileRankForLeaderboardEntry:(NSDictionary*)leaderboardEntry method to the CrystalLeaderboards to return the new percentile based string information from the leaderboard data.\
+\
+Fixed an issue with some dialogs appearing offset\
+\
+Updated the Twitter implementation to use a dialog that will auto-rotate and has a semi-transparent background.\
+\
+Fixed a problem with the badge icon sometimes being shown too large\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \ul CrystalSDK_1.7_build-0184b 14/12/2010\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 \ulnone Major changes
+\b0 \
+\
+Implemented new gifting and virtual currencies API's \
+\
+Improvements to the achievement and leaderboard posting performance \
+\
+\
+
+\b Minor Changes
+\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Updated the Unity API achievement and leaderbaord posting methods to allow the developer to specify a custom Game Center ID, otherwise it should still work as before using the Crystal ID for the Game Center ID if none is specified. \
+\
+Fixed an issue with the Facebook username not being displayed after logging out and re-logging in on the client. \
+\
+Fixed an issue with the title of the popup of an incoming challenge result being incorrect. \
+\
+Implemented the iPad push notification handling using a UIAlertView \
+\
+Implemented public Unity method to be able to open the Crystal UI at a specific leaderboard via Unity\
+\
+	public void ActivateUiAtLeadboardWithId(string leaderboardId)\
+\
+Fix for the post achievement method not returning YES when subsequent users are logged in and obtaining achievements for the first time. \
+\
+Added new public isCrystalUiActive method for checking if the Crystal UI is currently active and therefore visible. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 Achievement popups carousel when many have been triggered \
+\
+Achievement popups now dismiss when touched \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \ul \
+CrystalSDK_1.7_build-0176 15/11/2010\
+\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 IMPORTANT NOTE:
+\b0  The Crystal SDK library will be built against iOS 4.2 SDK only from this point onwards\
+\
+
+\b Major changes
+\b0 \
+\
+New UI element for virtual goods \
+\
+
+\b Minor Changes
+\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+Added Game Center synchronisation button for users to be able to sync their Crystal data to Game Center \
+\
+Implemented a fix to prevent Safari from appearing briefly when an iTunes link is selected\
+\ul \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ulnone Fix for the deactivateUI method taking a long time - excessive caching of images \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ul \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ulnone Fix for a users location often being determined incorrectly or not at all \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+CrystalSDK_1.6_build-0174 09/11/2010\
+\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 Major changes
+\b0 \
+\
+Built against the recent iOS 4.2 SDK release that unifies the iPad and iPhone/iPod Touch builds. \
+\
+Updated the Twitter authentication to use OAuth via ASIHTTP.  \
+\
+Updated the Facebook SDK from Facebook Connect to the latest Facebook iOS SDK \
+\
+\
+
+\b Minor Changes
+\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+Added Game Center user switching support \
+\
+Added Game Center friend matching support \
+\
+Updated the 'invite friends via email' to display a name rather than email address \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Updated the user signed in status checking to be more reliable \
+\
+Updated the use of the location manager so that updates are started when the Crystal UI is opened and stopped when it is closed \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+Implemented a new public method to allow a developer to open the Crystal UI at a specific leaderboard:\
+\
+	+ (void) activateCrystalUIAtLeaderboardWithId:(NSString*)leaderboardId;\
+\
+\
+\ul CrystalSDK_1.4_build-0160 16/09/2010\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 Major changes
+\b0 \
+\
+Added support for Game Center API's.  Documentation for the Game Center API's can be found here: http://devsupport.crystalsdk.com/default.asp?W46\
+\
+Added Game Center Unity API's \
+\
+Added new public API support for the handleOpenURL application delegate pass-through.  This should be used to ensure challenges started from email links are started successfully.  Documentation for integrating challenges can be found here: http://devsupport.crystalsdk.com/default.asp?W19\
+\
+Deprecated the use of the CrystalSettingSingleiPadPopover setting.  All iPad interfaces will now use the single popover by default and setting this option will have no effect. \
+\
+Updated the Reachability to use v2.0.4 (modified version of Apple v2.0) for the ASIHTTP code.\
+\
+Added the ASIHTTP codebase for future changes to the Twitter API.\
+
+\b NOTE:
+\b0  This requires linking with the CFNetwork.framework and MobileCoreServices.framework \
+\
+
+\b Minor Changes
+\b0 \
+\
+Corrected an issue with Safari appearing briefly when clicking on an iTunes link \
+\
+}

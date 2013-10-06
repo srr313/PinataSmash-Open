@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+  <TOC>
+    <Node>
+      <Name>Root</Name>
+      <Path>index.html</Path>
+      <Subnodes>
+       <Node>
+        <Name>API Documentation</Name>
+        <Path>index.html</Path>
+       </Node>
+       <Node>
+        <Name>Related Pages</Name>
+        <Path>pages.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Credits</Name>
+          <Path>credits.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Release Notes</Name>
+          <Path>genreleasenotes.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Deprecated List</Name>
+          <Path>deprecated.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Modules</Name>
+        <Path>modules.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Getting an array of achievements unlocked</Name>
+          <Path>group__get.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Accessing achievement data</Name>
+          <Path>group__query.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Crystal UI handling</Name>
+          <Path>group__ui.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Posting data to Crystal</Name>
+          <Path>group__post.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Game Center related functionality</Name>
+          <Path>group__gc.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Pass-through methods that help Crystal to integrate with iOS</Name>
+          <Path>group__pass.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Functionality related to Crystal challenges</Name>
+          <Path>group__challenge.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Class List</Name>
+        <Path>annotated.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>&lt;CrystalAchievementDelegate&gt;</Name>
+          <Path>protocol_crystal_achievement_delegate-p.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalAchievements</Name>
+          <Path>interface_crystal_achievements.html</Path>
+         </Node>
+         <Node>
+          <Name>&lt;CrystalLeaderboardDelegate&gt;</Name>
+          <Path>protocol_crystal_leaderboard_delegate-p.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalLeaderboards</Name>
+          <Path>interface_crystal_leaderboards.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalPlayer</Name>
+          <Path>interface_crystal_player.html</Path>
+         </Node>
+         <Node>
+          <Name>&lt;CrystalPlayerDelegate&gt;</Name>
+          <Path>protocol_crystal_player_delegate-p.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalSession</Name>
+          <Path>interface_crystal_session.html</Path>
+         </Node>
+         <Node>
+          <Name>&lt;CrystalSessionDelegate&gt;</Name>
+          <Path>protocol_crystal_session_delegate-p.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalUnityBasic</Name>
+          <Path>class_crystal_unity_basic.html</Path>
+         </Node>
+         <Node>
+          <Name>CrystalVirtualGoods</Name>
+          <Path>interface_crystal_virtual_goods.html</Path>
+         </Node>
+         <Node>
+          <Name>&lt;CrystalVirtualGoodsDelegate&gt;</Name>
+          <Path>protocol_crystal_virtual_goods_delegate-p.html</Path>
+         </Node>
+         <Node>
+          <Name>Procurios::Public::JSON</Name>
+          <Path>class_procurios_1_1_public_1_1_j_s_o_n.html</Path>
+         </Node>
+         <Node>
+          <Name>LeaderboardEntry</Name>
+          <Path>class_leaderboard_entry.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Class Index</Name>
+        <Path>classes.html</Path>
+       </Node>
+       <Node>
+        <Name>Class Members</Name>
+        <Path>functions.html</Path>
+       </Node>
+       <Node>
+        <Name>Namespace List</Name>
+        <Path>namespaces.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Procurios::Public</Name>
+          <Path>namespace_procurios_1_1_public.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>File List</Name>
+        <Path>files.html</Path>
+        <Subnodes>
+        </Subnodes>
+       </Node>
+      </Subnodes>
+    </Node>
+  </TOC>
+</DocSetNodes>

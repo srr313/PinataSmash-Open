@@ -1,0 +1,15 @@
+BEGIN
+    NAME=LEVELS
+    LEVEL1=Level_03_01
+    LEVEL2=Level_03_02
+    LEVEL3=Level_03_03
+    LEVEL4=Level_03_04
+    LEVEL5=Level_03_05
+    LEVEL6=Level_03_06
+    LEVEL7=Level_03_07   
+    LEVEL8=Level_03_08
+    LEVEL9=Level_03_09
+    LEVEL10=Level_03_11
+    LEVEL11=Level_03_10
+    LEVEL12=Level_03_12
+END

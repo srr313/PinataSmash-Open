@@ -1,0 +1,263 @@
+Level file description
+/////////////////////////////////////////////////////////////////////
+
+Levels are comprised of blocks which define level attributes, rules, and powerup and pinata spawners.
+
+Basic level format:
+HEADER BLOCK        - just one
+RULE BLOCK          - just one
+PINATA_SPAWNERS     - any number
+POWER-UP SPAWNERS   - any number
+
+You can add blocks in any order but it's nice to be consistent and start with the header, followed by the rule, then the spawners.
+
+The header block is used to define basic information about the level:
+
+BEGIN
+    NAME=HEADER             
+    TITLE=sample            title text here
+    STATE=1                 default lock state:0 is locked; 1 is unlocked
+    INITIAL_CANDY=250       initial size of the candy pile
+    CONSUME_DELAY=2.0       delay between events where the pile depletes.
+    CONSUME_AMOUNT=20.0     amount the candy pile depletes for the above events
+    CANDY_REQUIRED=600.0    amount of candy the player must collect in order to win the level
+    DISPLAY_CURRENCY_TIP=TRUE display currency tip on start?
+    MESSAGE1=Hello...       Message that appears at the top after the level starts
+    MESSAGE1_DELAY=3.0      Wait three seconds before showing up.
+    MESSAGE2=Dude!
+    TUTORIAL1=Some text!    Tutorial popup (w/modal dialog)
+    TUTORIAL1_DELAY=2.0     Wait two seconds before showing up.
+    ...
+END
+
+The rule block is used to define how the game is judged in order to reward the player with medals and determine whether he lost by getting below bronze.
+
+BEGIN
+    NAME=RULE           
+    COMPARISON=-1           Sign of operator (-1 or 1 which are '<' and '>') where the left-side is the game metric, the right side is the medal value you specify.
+    METRIC=1                How the game is judged: 1 is # of hits; 0 is seconds elapsed.
+    BRONZE=90               Right side of comparison to earn bronze; i.e., fewer than 90 hits to win a bronze.
+    SILVER=30               Right side of comparison to earn silver; i.e., fewer than 30 hits to win a silver.
+    GOLD=20                 Right side of comparison to earn gold; i.e., fewer than 20 hits to win a gold.  The player is awarded the best medal.
+END
+
+The pinata spawner is responsible for spawning one or more of a specific type of pinata at a particular location.
+
+BEGIN 
+    NAME=PINATA_SPAWNER     Spawns Pinata(s)
+    POSITION=0.5,0.5        Game world position boundaries are 0-1 in each dimension.  The position is randomized when this field is not included. Spawners may be off-screen (most of my crocodile spawners are for instance)
+    VELOCITY=100.0,0.0      Initial Velocity.  When this is not set, the initial velocity is zero if the pinata is spawned on-screen, or else directed toward the center of the screen. 
+    RADIUS=90.0             Adds random perturbation to the initial velocity so that pinatas are directed randomly within a cone of size X degrees centered around the velocity vector.
+    TIME_BETWEEN=0.0        Fixed delay between spawning additional pinatas
+    INITIAL_DELAY=0.0       Fixed delay before spawning the first pinata
+    RANDOM_DELAY=3.0        Random delay in addition to TIME_BETWEEN before spawning the next pinata.  Random time less than this number (e.g., between 0 and 3 seconds more).  Random variable is uniformly distributed.
+    TYPE=1                  Type of pinata to spawn (use below pinata codes)
+    AMOUNT=1                Total amount of pinatas that can be spawned over the lifetime of the spawner.
+    LIMIT=3                 Maximum number of this pinata type that can be alive before the spawner can create a new one.  This is good for managing the number of crocodiles.
+    GHOSTING=true           Enables/Disables ghost behavior
+    VEGGIES=true            Turns good pinata into a healthy 'green' pinata
+    LIFETIME=3.0            Specifies limited lifetime (existence) for pinata
+END
+
+The power-up spawner is responsible for spawning one or more of a specific type of powerup at a particular location.
+
+BEGIN 
+    NAME=POWERUP_SPAWNER    Spawns Powerup(s)
+    POSITION=-1.5,0.5       Same as PINATA_SPAWNER
+    TIME_BETWEEN=1.0        Same as PINATA_SPAWNER
+    RANDOM_DELAY=5.0        Same as PINATA_SPAWNER
+    INITIAL_DELAY=0.0       Same as PINATA_SPAWNER
+    TYPE=5                  Type of powerup to spawn (use below powerup codes)
+    AMOUNT=99999            Same as PINATA_SPAWNER
+    LIFETIME=2.5            Powerup only stays alive for this long (only applies if >0 and it's on a bungee)
+    USE_PARACHUTE=true      true or false: powerup is spawned with a parachute
+    USE_BUNGEE=true         true or false: powerup is spawned with a bungee cord coming from the top of the screen
+    PINATA_AMOUNT           Only use this for the pinata box powerup (see below)
+    PINATA_TYPE             Only use this for the pinata box powerup (see below)
+    PINATA_GHOSTING         Only use this for the pinata box powerup (see below)
+    PINATA_VEGGIES          Only use this for the pinata box powerup (see below)
+    PINATA_LIFETIME=3.0     Only use this for the pinata box powerup (see below)
+END
+* Power-ups are impulsed towards the center of the screen when they are spawned, unless they use bungees or parachutes.
+
+BEGIN
+    NAME=CLOUD_SPAWNER      Spawns cloud
+    TIME_BETWEEN=1.0        Same as PINATA_SPAWNER
+    RANDOM_DELAY=5.0        Same as PINATA_SPAWNER
+    INITIAL_DELAY=0.0       Same as PINATA_SPAWNER
+    AMOUNT=100              Number of times to trigger
+    LIFETIME=1.0            Time a cloud stays up
+    FRACTION_DOGS=0.5       proportion dogs
+    FALL_SPEED=200.0        fall speed of pinatas
+    SPAWN_DELAY=0.1         Time between pinatas
+END
+
+Pinatas /////
+/////////////
+
+PINATA          TYPE
+
+Pig             1
+--------------------
+Pig who puts himself back together. Gives candy when hit.
+
+Crocodile       2
+--------------------
+Eats pinatas that give candy.  Adversarial pinata.
+
+Ghost Pig       3
+--------------------
+Pig with vanishing parts.  Gives candy when hit (when visible).
+
+Healthy Pig     4
+--------------------
+Pig with healthy parts.  Deducts candy when veggie pieces are hit.
+
+Bomb Pig        5
+--------------------
+Pig with bombs attached.  Basically, just keeps breaking it apart and makes it more difficult to hit.  No candy is awarded when bombs go off.
+
+Bear Pinata     6
+--------------------
+Awards lots of candy but requires three hits.  Only stays alive for a few seconds.
+
+Baby Squid      7
+--------------------
+Eats your candy pile.  Adversarial pinata.
+
+Baby Octopus    8
+--------------------
+Attacks adversarial pinatas.  Deals one damage each time it touches one of them.  Only stays alive for a few seconds.
+
+Bunny           9
+--------------------
+Only one hit to break.  Deducts candy from your pile.  Only stays alive for a few seconds.
+
+Mother Squid    10
+--------------------
+Spawns baby squid.
+
+Donkey          11
+--------------------
+Pinata that only requires one hit to destroy.  Gives candy when hit.
+
+UFO             12
+--------------------
+Steals candy from your pile.
+
+Good Gremlin    13
+--------------------
+Gives candy until he eats enough to turn into a bad pinata and eats other pinatas.
+
+Bad Gremlin     14
+--------------------
+Eats other pinatas.
+
+Spike           15
+--------------------
+Damages other pinata on impact; destroyed afterwards.
+
+Pinhead         16
+--------------------
+Breaks into spikes when hit.
+
+Treasure        17
+--------------------
+Gives candy after the device is shaken.
+
+Zombie          18
+--------------------
+Converts veggie pinatas to candy pinatas
+
+Plane           19
+--------------------
+Lands on the candy pile, providing candy
+
+Osmos           20
+--------------------
+Captures good pinatas
+
+Chameleon       21
+--------------------
+Healthy pinata that disguises itself as a healthy one
+
+Dog             22
+--------------------
+Simple breakable pinata with candy.
+
+Cat             23
+--------------------
+Simple breakable pinata with veggies.
+
+Grower          24
+--------------------
+Makes candy/veggie pinatas larger.
+
+Power-ups ///
+/////////////
+
+POWERUP          TYPE
+
+
+Bomb            0
+-----------------
+Deals one damage to every pinata.
+
+Candy Bundle    1
+-----------------
+Massive amount of candy.
+
+Negative Candy  2
+_________________
+Moderate amount of candy deducted from your candy pile.  
+These look just like bunny pinatas except they don't ricochet off walls
+    AND they support power-up attachments (below)
+
+Slow-Motion     3
+-----------------
+Temporarily slows time.
+
+Shrink          4
+-----------------
+Temporarily reduces the size of every piñata.
+
+Pinata Box      5
+-----------------
+Box of pinatas.  You specify the type and number of pinatas released.
+    This has additional parameters for the POWERUP_SPAWNER which mirror the above parameters for pinatas:
+    PINATA_AMOUNT   amount of pinatas released when struck
+    PINATA_TYPE     type of pinata released (use pinata type number)
+    PINATA_GHOSTING pinatas have ghosting attribute
+    PINATA_VEGGIES  green pinatas
+    PINATA_LIFETIME set lifetime for the pinata
+
+Metric Bonus (i.e., extra time or hits) 6
+-----------------------------------------
+Adds extra time or hits depending on the current game mode.
+
+Random          7
+-----------------
+Randomly cycles between power-ups.  I don't use this anywhere, so it may no longer even work.  
+Let me know if you think this would be useful
+
+
+Achievement System (todo add documentation)    
+    kAchievementField_TotalCandyCollected           //0
+    kAchievementField_TotalVegetables,              //1
+    kAchievementField_TotalTime,                    //2
+    kAchievementField_TotalBombsDestroyed,          //3
+    kAchievementField_GoldMedalsCollected,          //4
+    kAchievementField_SilverMedalsCollected,        //5
+    kAchievementField_BronzeMedalsCollected,        //6
+    kAchievementField_totalNormalPinatasDestroyed,  //7
+    kAchievementField_totalCannibalPinatasDestroyed,//8
+    kAchievementField_totalTickPinatasDestroyed,    //9
+    kAchievementField_totalTicksFreed,              //10
+    kAchievementField_totalHerosFreed,              //11
+    
+    
+      uniqueID = [group getAttributeString:@"ID"];
+        comparison = [group getAttributeInt:@"COMPARISON"];
+        field = [group getAttributeInt:@"METRIC"];
+        rhs = [group getAttributeFloat:@"RHS"];
+        description = [group getAttributeString:@"DESCRIPTION"];

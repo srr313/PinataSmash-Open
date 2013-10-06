@@ -1,0 +1,15 @@
+BEGIN
+    NAME=LEVELS
+    LEVEL1=Level_donkey
+    LEVEL2=Level_donkeyAndPig
+    LEVEL3=Level_healthyPinatas
+    LEVEL4=Level_bunny
+    LEVEL5=Level_healthyAndVeggies
+    LEVEL6=Level_crocHoles
+    LEVEL7=Level_sloMo
+    LEVEL8=Level_crocsAndAll
+    LEVEL9=Level_Bears
+    LEVEL10=Level_bombsAndShrink
+    LEVEL11=Level_boxesOnly
+    LEVEL12=Level_boxesAndBungees_HARD
+END

@@ -1,0 +1,15 @@
+BEGIN
+    NAME=LEVELS
+    LEVEL1=Level_02_01_Monkey
+    LEVEL2=Level_02_02_squid
+    LEVEL3=Level_02_03_CandyPiles
+    LEVEL4=Level_02_04_SquidAndFriends
+    LEVEL5=Level_02_05_MamaSquid
+    LEVEL7=Level_02_07_Ghosts
+	LEVEL6=Level_02_06_MamaAndFriends
+    LEVEL8=Level_02_08_HauntedParty   
+    LEVEL9=Level_02_09_UFO
+    LEVEL10=Level_02_10_UFOmixed
+    LEVEL11=Level_02_11_Gremlin
+    LEVEL12=Level_02_12_FinalMixed
+END

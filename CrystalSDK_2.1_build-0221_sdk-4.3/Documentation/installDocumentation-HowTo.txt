@@ -1,0 +1,33 @@
+Crystal SDK Documentation Installation Instructions
+========================================
+
+The documentation for the Crystal SDK is now output as a docset that can be installed into XCode.  This allows the API's and documentation to be accessed via XCode's in-built Developer Documentation interface which includes a search facility.
+
+To install the Crystal SDK docset please follow these instructions:
+
+Manual Installation
+===============
+
+
+Xcode 3.2.5
+=========
+
+1. Ensure XCode is closed
+2. Copy the 'com.chillingo.ios.crystalsdk.docset' file to 'Users/YOURUSERNAME/Library/Developer/Shared/Documentation/Docsets/' 
+NOTE: If any of the directories do not exist then you can simply create them
+3. Open XCode
+4. Select 'Help->Developer Documentation'
+5. Click on the 'Home' drop down menu
+6. Check to see that the 'Crystal SDK for iOS' appears in the menu.
+
+
+Xcode 4
+=======
+
+1. Ensure XCode is closed
+2. Copy the 'com.chillingo.ios.crystalsdk.docset' file to 'Users/YOURUSERNAME/Library/Developer/Shared/Documentation/Docsets/' 
+NOTE: If any of the directories do not exist then you can simply create them
+3. Open XCode
+4. Select 'Help->Documentation and API Reference'
+5. Click on the eye icon
+6. Check to see that the 'Crystal SDK for iOS' appears in the menu.
